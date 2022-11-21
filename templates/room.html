@@ -1,0 +1,11 @@
+
+<h1>{{todo.title}}</h1>
+<h1>{{todo.description}}</h1>
+<ul>
+    {% for t in todo.tag.all %}
+        <h1><li> {{t.name}} </li></h1>
+    {% endfor %}
+</ul>
+<h1>{{todo.status}}</h1>
+<h1>{{todo.due_date}}</h1>
+<h1>{{todo.created}}</h1>

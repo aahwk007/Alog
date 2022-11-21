@@ -1,0 +1,6 @@
+<form method="POST" action="">
+    {% csrf_token %}
+    <p>Are you sure you wnat to delete "{{todo}}"?</p>
+    <a href="{% url 'home' %}">Go back</a>
+    <input type="submit" value="confirm"/>
+</form>

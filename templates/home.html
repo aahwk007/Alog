@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo</title>
+</head>
+<body>
+    <h1>fdsljfbhsf</h1>
+    <div>
+        {% for todo in todos %}
+            <div>
+                <a href="{% url 'update-todo' todo.id %}">edit</a>
+                <a href="{% url 'delete-todo' todo.id %}">delete</a>
+                <a href="/todo/{{todo.id}}">
+                    <h5>{{todo.id}} -- {{todo.title}}</h5>
+                </a>
+                <hr>
+            </div>
+        {% endfor %}
+    </div>
+    <a href="{% url 'create-todo' %}">create room</a>
+</body>
+</html>
